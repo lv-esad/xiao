@@ -13,7 +13,5 @@ services:
         generateValue: true
       - key: NODE_ENV
         value: production
-    disk:
-      name: sqlite-data
-      mountPath: /data
-      sizeGB: 1
+      - key: DATABASE_URL
+        sync: false # User will provide this from Neon
